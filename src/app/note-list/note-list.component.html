@@ -1,0 +1,19 @@
+
+<h4>Enter the note list</h4>
+
+<input type="text"  (keyup.enter)="addNote()"  [(ngModel)] = "note">
+<hr>
+
+<h4> ADDED NOTES LIST<h4>
+<ul  *ngIf = "noteList.length > 0" >  
+
+    <app-note-list-item (noteTObeDelete) = "deleteNote($event)"  *ngFor="let note of noteList"  [note] = "note"  >
+        
+    </app-note-list-item>
+    
+</ul>
+
+<h4 *ngIf = "noteList.length <= 0"> The NOTE list is Empty<h4>
+
+
+
