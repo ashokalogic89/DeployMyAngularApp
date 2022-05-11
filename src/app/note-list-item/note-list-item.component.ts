@@ -17,7 +17,6 @@ export class NoteListItemComponent implements OnInit {
   }
 
   NoteTobeDeleted(){
-    alert(this.note);
     this.noteTObeDelete.emit(this.note);
   }
   
